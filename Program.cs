@@ -8,24 +8,25 @@ namespace TinhChiSoCanNang
         {
             double height;
             double weight;
+            double bmi;
 
-            Console.WriteLine("Please enter a height");
+            Console.WriteLine("Nhap chieu cao");
             height = float.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter your weight");
+            Console.WriteLine("Nhap can nang");
             weight = float.Parse(Console.ReadLine());
 
-            double bmi = weight / Math.Pow(height, 2);
+            bmi = weight / Math.Pow(height, 2);
             bmi = Math.Round(bmi, 1);
 
             if (bmi < 18)
-                Console.WriteLine(" Underweight");
+                Console.WriteLine(" Thieu can");
             else if (bmi < 25.0)
-                Console.WriteLine(" Normal");
+                Console.WriteLine(" Binh thuong");
             else if (bmi < 30.0)
-                Console.WriteLine(" Overweight");
+                Console.WriteLine(" Thua can");
             else
-                Console.WriteLine(" Obese");
-                
+                Console.WriteLine(" Beo phi");
+
             Console.Write("BMI: " + bmi);
         }
     }
